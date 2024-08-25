@@ -2,23 +2,22 @@
 
 {% load static %}
 
-{% block title %}Новости{% endblock %}
+{% block title %}Тэги{% endblock %}
 
 {% block content %}
   <div class="row">
-    {% for article in object_list %}
+    {% for tag in object_list %}
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="{% get_media_prefix %}{{ article.image }}" alt=""></a>
+          <a href="#"><img class="card-img-top" src="{% get_media_prefix
+                  %}{{ tag.articles }}" alt=""></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">{{ article.title }}</a>
+              <a href="#">{{ tag.name }}</a>
             </h4>
             <p class="card-text">{{ article.text }}</p>
             {% for scope in article.scopes.all %}
-              <span class="badge {% if scope.is_main %}badge-primary{% else
-                      %}badge-secondary{% endif %}">{{ scope.tag.name }}
-              </span>
+              <span class="badge {% if scope.is_main %}badge-primary{% else %}badge-secondary{% endif %}">{{ scope.tag.name }}</span>
             {% endfor %}
           </div>
         </div>

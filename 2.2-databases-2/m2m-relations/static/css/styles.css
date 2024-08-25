@@ -1,0 +1,25 @@
+.tag-list {
+    list-style-type: none; /* Убирает точки перед элементами списка */
+    padding: 0; /* Убирает отступы */
+    display: flex; /* Выводит элементы списка в одну строку */
+    margin-right: 10px; /* Добавить отступ между элементами */
+    flex-wrap: wrap; /* Переносит элементы на новую строку при необходимости */
+}
+.tag {
+    display: inline-block; /* Отображает элементы в строку */
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ADD8E6; /* Светло-голубой фон  */
+}
+
+.tag-main {
+    background-color: #FFD700; /* Цвет для основных тегов  */
+    font-weight: bold; /* Жирный шрифт для основных тегов */
+}
+
+h4 {
+    font-size: 1.2rem; /* Уменьшите размер шрифта по вашему усмотрению */
+    font-weight: bold; /* Сделайте текст жирным */
+}
